@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TravelCo - Explore the World</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* 🌍 Global Theme */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h2 {
+      color: #006994; /* ocean blue */
+      font-weight: bold;
+    }
+
+    /* 🌐 Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #006994, #00a8cc);
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffd700 !important; /* golden hover */
+    }
+
+    /* 🏞️ Hero Section */
+    header.jumbotron {
+      background: url('hero.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header.jumbotron .container {
+      background: rgba(0,0,0,0.55);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffd700;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #fff;
+    }
+    header .btn-primary {
+      background-color: #ffd700;
+      border: none;
+      color: #333;
+      font-weight: bold;
+    }
+    header .btn-primary:hover {
+      background-color: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    /* 🗺️ Destination Cards */
+    .card {
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .card-title {
+      color: #006994;
+      font-weight: bold;
+    }
+    .btn-outline-primary {
+      border-color: #006994;
+      color: #006994;
+    }
+    .btn-outline-primary:hover {
+      background-color: #006994;
+      color: #fff;
+    }
+
+    /* 🎒 Tours Accordion */
+    .accordion .card-header {
+      background-color: #00a8cc;
+      color: #fff;
+    }
+    .accordion .btn-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .accordion .btn-link:hover {
+      color: #ffd700;
+    }
+
+    /* ✉️ Contact Form */
+    #contact form .form-control {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    #contact button {
+      background-color: #006994;
+      border: none;
+      font-weight: bold;
+    }
+    #contact button:hover {
+      background-color: #00a8cc;
+    }
+
+    /* ⚓ Footer */
+    footer {
+      background: #006994;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <a class="navbar-brand" href="#">TravelCo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+      <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="jumbotron jumbotron-fluid text-center text-white">
+  <div class="container">
+    <h1 class="display-4">Explore the World with TravelCo</h1>
+    <p class="lead">Your adventure starts here</p>
+    <a href="#destinations" class="btn btn-primary btn-lg">Discover Now</a>
+  </div>
+</header>
+
+<!-- Destinations Section -->
+<section id="destinations" class="container my-5">
+  <h2 class="text-center mb-4">Top Destinations</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="paris.jpg" class="card-img-top" alt="Paris">
+        <div class="card-body">
+          <h5 class="card-title">Paris</h5>
+          <p class="card-text">Experience the romance of the City of Lights.</p>
+          <a href="#" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="bali.jpg" class="card-img-top" alt="Bali">
+        <div class="card-body">
+          <h5 class="card-title">Bali</h5>
+          <p class="card-text">Relax on pristine beaches and explore temples.</p>
+          <a href="#" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="newyork.jpg" class="card-img-top" alt="New York">
+        <div class="card-body">
+          <h5 class="card-title">New York</h5>
+          <p class="card-text">Discover the energy of the Big Apple.</p>
+          <a href="#" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tours Section -->
+<section id="tours" class="container my-5">
+  <h2 class="text-center mb-4">Our Tours</h2>
+  <div class="accordion" id="tourAccordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+            European Highlights
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#tourAccordion">
+        <div class="card-body">
+          Explore Paris, Rome, and London in one trip. <a href="#">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
+          Asian Adventure
+        </button>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#tourAccordion">
+        <div class="card-body">
+          Discover Bali, Tokyo, and Bangkok. <a href="#">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree">
+          American Road Trip
+        </button>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#tourAccordion">
+        <div class="card-body">
+          Drive across the USA and see iconic landmarks. <a href="#">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="container my-5">
+  <h2 class="text-center mb
